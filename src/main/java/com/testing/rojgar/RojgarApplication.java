@@ -12,7 +12,7 @@ public class RojgarApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RojgarApplication.class, args);
 		if (logger.isDebugEnabled()) {
-			logger.debug(RojgarApplication.class + "Reached to Main Class Successfully");
+			logger.debug(RojgarApplication.class + " Reached to Main Class Successfully");
 		}
 		SpringApplication.run(RojgarApplication.class, args);
 	}

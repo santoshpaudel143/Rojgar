@@ -50,9 +50,8 @@ public class UserRegistration implements TableColumnNameConstants {
 	@Column(name = DATE_OF_BIRTH, nullable = false, columnDefinition = "VARCHAR(50)")
 	private String dateOfBirth;
 
-	@Column(name = GENDER, nullable = false, columnDefinition = "boolean default male")
-	@ColumnDefault(MALE)
-	private boolean gender;
+	@Column(name = GENDER, nullable = false, columnDefinition = "VARCHAR(10)")
+	private String gender;
 
 	@Column(name = STATUS, nullable = false, columnDefinition = "boolean default true")
 	@ColumnDefault("1")
