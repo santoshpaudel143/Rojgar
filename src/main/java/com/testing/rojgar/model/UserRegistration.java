@@ -26,8 +26,8 @@ import lombok.Setter;
  ** Author: Santosh Paudel
  **/
 
-@Getter
-@Setter
+//@Getter
+//@Setter
 @Data // writs getter/setter
 @AllArgsConstructor // constructor with all args
 @NoArgsConstructor // super constructor
