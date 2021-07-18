@@ -25,7 +25,7 @@ public class UserRegistrationController {
 	@Autowired
 	private UserRegistrationService userRegistrationService;
 
-	@RequestMapping(value = "/test")
+	@GetMapping(value = "/test")
 	public String testing() {
 		return "This is testing";
 	}
