@@ -1,5 +1,6 @@
 package com.testing.rojgar.service;
 
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class UserRegistrationServiceImpl implements UserRegistrationService {
 
 	@Override
 	public UserRegistration saveUserRegistration(UserRegistration userRegistration) throws Exception {
-		userRegistration.setCreated_in(new Date());
+//		userRegistration.setCreated_in(Timestamp.valueOf(String.valueOf(new Date())));
 		UserRegistration savedUserRegistration = userRegistrationRepository.save(userRegistration);
 		return savedUserRegistration;
 	}
@@ -34,7 +35,7 @@ public class UserRegistrationServiceImpl implements UserRegistrationService {
 		existingUserRegistration.setContact(userRegistration.getContact());
 		existingUserRegistration.setDateOfBirth(userRegistration.getDateOfBirth());
 		existingUserRegistration.setEmail(userRegistration.getEmail());
-		existingUserRegistration.setCreated_in(existingUserRegistration.getCreated_in());
+//		existingUserRegistration.setCreated_in(existingUserRegistration.getCreated_in());
 		existingUserRegistration.setFullName(userRegistration.getFullName());
 		existingUserRegistration.setGender(userRegistration.getGender());
 		existingUserRegistration.setPassword(userRegistration.getPassword());

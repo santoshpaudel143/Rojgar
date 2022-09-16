@@ -1,5 +1,6 @@
 package com.testing.rojgar.model;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -43,7 +44,7 @@ public class UserRegistration implements TableColumnNameConstants {
 	@Column(name = FULL_NAME, nullable = false, columnDefinition = "VARCHAR(255)")
 	private String fullName;
 
-	@Column(name = USER_NAME, nullable = false, columnDefinition = "VARCHAR(50)", unique = true)
+	@Column(name = USER_NAME, nullable = false, columnDefinition = "VARCHAR(50)")
 	private String userName;
 
 	@Column(name = ADDRESS, nullable = false, columnDefinition = "VARCHAR(255)")
@@ -64,12 +65,11 @@ public class UserRegistration implements TableColumnNameConstants {
 	@Column(name = GENDER, nullable = false, columnDefinition = "VARCHAR(10)")
 	private String gender;
 
-	@Column(name = STATUS, nullable = false, columnDefinition = "boolean default true")
-	@ColumnDefault("1")
+	@Column(name = STATUS, nullable = false)
 	private boolean status;
 
-	@CreationTimestamp
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = CREATED_IN, nullable = false, columnDefinition = "datetime")
-	private Date created_in;
+//	@CreationTimestamp
+//	@Temporal(TemporalType.TIMESTAMP)
+//	@Column(name = CREATED_IN, nullable = false)
+//	private Timestamp created_in;
 }
